@@ -16,6 +16,7 @@ const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
+const HOST = process.env.HOST || '0.0.0.0';
 
 // ---- Middleware chung ----
 app.use(express.json());
@@ -49,6 +50,21 @@ app.get('/', (req, res) => {
 });
 
 // ---- Khoi dong ----
+/** Lay danh sach dia chi IPv4 cua may de in ra cho tien truy cap */
+function getLocalIps() {
+    const os = require('os');
+    const result = [];
+    const nets = os.networkInterfaces();
+    for (const name of Object.keys(nets)) {
+        for (const net of nets[name] || []) {
+            if (net.family === 'IPv4' && !net.internal) {
+                result.push(net.address);
+            }
+        }
+    }
+    return result;
+}
+
 (async () => {
     try {
         await testConnection();
@@ -58,7 +74,19 @@ app.get('/', (req, res) => {
         process.exit(1);
     }
 
-    app.listen(PORT, () => {
+    app.listen(PORT, HOST, () => {
         console.log(`[Server] Dang chay tai http://localhost:${PORT}`);
+        if (HOST === '0.0.0.0') {
+            const ips = getLocalIps();
+            if (ips.length === 0) {
+                console.log('     Khong tim thay dia chi IPv4 nao.');
+            } else {
+                console.log('     May khac trong cung WiFi vao bang dia chi:');
+                for (const ip of ips) {
+                    console.log(`       http://${ip}:${PORT}`);
+                }
+            }
+            console.log('     (Nho mo firewall cho port ' + PORT + ' voi TCP)');
+        }
     });
 })();
