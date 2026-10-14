@@ -4,7 +4,7 @@ Giao diện đăng nhập Cleanova được xây dựng bằng HTML, CSS và Jav
 
 ## Chạy bằng VS Code và Live Server
 
-1. Mở thư mục `nova-login` bằng VS Code.
+1. Mở thư mục `cleannova` bằng VS Code.
 2. Cài extension **Live Server** nếu máy chưa có.
 3. Mở `index.html`, nhấn chuột phải và chọn **Open with Live Server** (hoặc chọn **Go Live** ở thanh trạng thái).
 4. Trình duyệt sẽ mở trang demo. Không cần cài Node.js, framework hay thư viện.
