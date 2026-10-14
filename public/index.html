@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4faf7">
+    <meta name="description" content="Đặt lịch và quản lý dịch vụ vệ sinh nhà cửa cùng Cleanova.">
+    <title>Đăng nhập · Cleanova</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="brand-panel" aria-labelledby="brand-title">
+        <a class="brand" href="index.html" aria-label="Cleanova - Trang chủ" data-i18n-aria-label="brandHome">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="m4.5 14.4 11.5-9 11.5 9V27H4.5V14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16.2 23.3c-4.6-2.2-4.4-6.6-3.6-8.4 4.4.1 7 2.2 6.8 5.2-.1 1.5-1.4 2.8-3.2 3.2Z" fill="#dff4e8"/>
+              <path d="M15.2 22.7c.3-2.2 1.3-3.9 3.4-5.6" stroke="#4d916e" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span>Cleanova</span>
+        </a>
+
+        <div class="brand-copy">
+          <p class="eyebrow" data-i18n="brandEyebrow">CHĂM SÓC NHÀ CỬA, NHẸ NHÀNG HƠN</p>
+          <h1 id="brand-title" data-i18n="brandTitle">Nhà sạch, ngày thêm vui.</h1>
+          <p class="brand-description" data-i18n="brandDescription">Đặt lịch và quản lý dịch vụ vệ sinh nhà cửa thật dễ dàng.</p>
+        </div>
+
+        <div class="illustration" aria-hidden="true">
+          <div class="orbit orbit--outer"></div>
+          <div class="orbit orbit--inner"></div>
+          <div class="planet planet--large"></div>
+          <div class="planet planet--small"></div>
+          <div class="spark spark--one"></div>
+          <div class="spark spark--two"></div>
+          <div class="workspace-card">
+            <div class="workspace-card__top">
+              <span class="mini-logo"></span>
+              <span class="mini-lines"><i></i><i></i></span>
+              <span class="mini-avatar"></span>
+            </div>
+            <div class="workspace-card__heading"></div>
+            <div class="workspace-card__subheading"></div>
+            <div class="workspace-card__calendar">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="workspace-card__footer">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="floating-note">
+            <span class="note-check">✓</span>
+            <span class="note-lines"><i></i><i></i></span>
+          </div>
+        </div>
+
+        <p class="brand-footer" data-i18n="brandFooter">Chăm nhà thảnh thơi, mỗi ngày.</p>
+      </section>
+
+      <section class="content-panel" aria-label="Đăng nhập" data-i18n-aria-label="accountAccess">
+        <div class="panel-topbar">
+          <a class="mobile-brand" href="index.html" aria-label="Cleanova - Trang chủ" data-i18n-aria-label="brandHome">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="m4.5 14.4 11.5-9 11.5 9V27H4.5V14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.2 23.3c-4.6-2.2-4.4-6.6-3.6-8.4 4.4.1 7 2.2 6.8 5.2-.1 1.5-1.4 2.8-3.2 3.2Z" fill="#dff4e8"/>
+                <path d="M15.2 22.7c.3-2.2 1.3-3.9 3.4-5.6" stroke="#4d916e" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span>Cleanova</span>
+          </a>
+          <div class="language-switch" role="group" aria-label="Chọn ngôn ngữ" data-i18n-aria-label="languageLabel">
+            <button class="language-button" type="button" data-language="vi" aria-pressed="true" aria-label="Chuyển sang Tiếng Việt" data-i18n-aria-label="switchVietnamese">VI</button>
+            <button class="language-button" type="button" data-language="en" aria-pressed="false" aria-label="Switch to English" data-i18n-aria-label="switchEnglish">EN</button>
+          </div>
+        </div>
+
+        <div class="auth-card" id="login-view">
+          <div class="auth-heading">
+            <p class="eyebrow" data-i18n="formEyebrow">RẤT VUI ĐƯỢC GẶP LẠI BẠN</p>
+            <h2 data-i18n="formTitle">Chào mừng trở lại</h2>
+            <p data-i18n="formDescription">Đăng nhập để tiếp tục và chăm sóc tổ ấm của bạn.</p>
+          </div>
+
+          <form id="login-form" novalidate>
+            <div class="field">
+              <label for="email" data-i18n="emailLabel">Email</label>
+              <div class="input-wrap">
+                <svg class="field-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3.25" y="5.25" width="17.5" height="13.5" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="m5 7 7 5.5L19 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input id="email" name="email" type="email" autocomplete="username" placeholder="ban@example.com" data-i18n-placeholder="emailPlaceholder" aria-describedby="email-error" required>
+              </div>
+              <p class="field-error" id="email-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="password" data-i18n="passwordLabel">Mật khẩu</label>
+              <div class="input-wrap">
+                <svg class="field-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="4.25" y="10" width="15.5" height="10.25" rx="2.5" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8 10V7.25a4 4 0 0 1 8 0V10M12 14v2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Nhập mật khẩu" data-i18n-placeholder="passwordPlaceholder" aria-describedby="password-error" required>
+                <button class="password-toggle" id="password-toggle" type="button" aria-label="Hiện mật khẩu" data-i18n-aria-label="showPassword" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M2.75 12s3.2-5.25 9.25-5.25S21.25 12 21.25 12 18.05 17.25 12 17.25 2.75 12 2.75 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    <circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                </button>
+              </div>
+              <p class="field-error" id="password-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-options">
+              <label class="remember-option">
+                <input id="remember-me" name="remember-me" type="checkbox">
+                <span class="custom-checkbox" aria-hidden="true"></span>
+                <span data-i18n="rememberMe">Ghi nhớ tôi</span>
+              </label>
+              <a class="text-link" href="#forgot-password" data-notice="forgotDemo" data-i18n="forgotPassword">Quên mật khẩu?</a>
+            </div>
+            <p class="demo-note" data-i18n="rememberNote">Tùy chọn ghi nhớ chỉ để minh họa; thông tin tài khoản không được lưu.</p>
+
+            <button class="primary-button" id="sign-in-button" type="submit">
+              <span class="button-label" data-i18n="signIn">Đăng nhập</span>
+              <span class="button-spinner" aria-hidden="true"></span>
+            </button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="divider"><span data-i18n="or">HOẶC</span></div>
+
+          <button class="google-button" id="google-button" type="button">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path fill="#4285F4" d="M19.6 10.23c0-.68-.06-1.36-.18-2.02H10v3.82h5.39a4.62 4.62 0 0 1-2 3.03v2.48h3.23c1.9-1.75 2.98-4.33 2.98-7.31Z"/>
+              <path fill="#34A853" d="M10 20c2.7 0 4.97-.9 6.62-2.46l-3.23-2.48c-.9.6-2.05.96-3.39.96-2.6 0-4.8-1.76-5.6-4.12H1.07v2.56A10 10 0 0 0 10 20Z"/>
+              <path fill="#FBBC05" d="M4.4 11.9a6.02 6.02 0 0 1 0-3.8V5.54H1.07a10 10 0 0 0 0 8.92L4.4 11.9Z"/>
+              <path fill="#EA4335" d="M10 3.98c1.47 0 2.78.5 3.82 1.5l2.86-2.86A9.57 9.57 0 0 0 10 0a10 10 0 0 0-8.93 5.54L4.4 8.1C5.2 5.74 7.4 3.98 10 3.98Z"/>
+            </svg>
+            <span data-i18n="googleButton">Tiếp tục với Google</span>
+          </button>
+          <p class="social-note" id="social-note" role="status" aria-live="polite"></p>
+
+          <p class="signup-prompt"><span data-i18n="signupPrompt">Chưa có tài khoản?</span> <a class="text-link" href="#sign-up" id="go-register" data-i18n="signUp">Đăng ký</a></p>
+          <p class="security-note" data-i18n="securityNote">Tài khoản được lưu an toàn trong cơ sở dữ liệu</p>
+        </div>
+
+        <div class="auth-card" id="register-view" hidden>
+          <div class="auth-heading">
+            <p class="eyebrow" data-i18n="registerEyebrow">BẮT ĐẦU THẬT NHẸ NHÀNG</p>
+            <h2 data-i18n="registerTitle">Tạo tài khoản mới</h2>
+            <p data-i18n="registerDescription">Đăng ký để đặt lịch và chăm sóc tổ ấm của bạn.</p>
+          </div>
+
+          <form id="register-form" novalidate>
+            <div class="field">
+              <label for="full-name" data-i18n="fullNameLabel">Họ và tên</label>
+              <div class="input-wrap">
+                <svg class="field-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M5 19.25c1.1-3 3.6-4.5 7-4.5s5.9 1.5 7 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <input id="full-name" name="fullName" type="text" autocomplete="name" placeholder="Nguyễn Văn A" data-i18n-placeholder="fullNamePlaceholder" aria-describedby="full-name-error" required>
+              </div>
+              <p class="field-error" id="full-name-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="register-email" data-i18n="emailLabel">Email</label>
+              <div class="input-wrap">
+                <svg class="field-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3.25" y="5.25" width="17.5" height="13.5" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="m5 7 7 5.5L19 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input id="register-email" name="email" type="email" autocomplete="email" placeholder="ban@example.com" data-i18n-placeholder="emailPlaceholder" aria-describedby="register-email-error" required>
+              </div>
+              <p class="field-error" id="register-email-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="register-phone" data-i18n="phoneLabel">Số điện thoại</label>
+              <div class="input-wrap">
+                <svg class="field-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6.75 3.75h10.5a1.5 1.5 0 0 1 1.5 1.5v13.5a1.5 1.5 0 0 1-1.5 1.5H6.75a1.5 1.5 0 0 1-1.5-1.5V5.25a1.5 1.5 0 0 1 1.5-1.5Z" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M10.5 17h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <input id="register-phone" name="phone" type="tel" autocomplete="tel" placeholder="0901234567" data-i18n-placeholder="phonePlaceholder" aria-describedby="register-phone-error">
+              </div>
+              <p class="field-error" id="register-phone-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="register-password" data-i18n="passwordLabel">Mật khẩu</label>
+              <div class="input-wrap">
+                <svg class="field-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="4.25" y="10" width="15.5" height="10.25" rx="2.5" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8 10V7.25a4 4 0 0 1 8 0V10M12 14v2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <input id="register-password" name="password" type="password" autocomplete="new-password" placeholder="Tối thiểu 6 ký tự" data-i18n-placeholder="registerPasswordPlaceholder" aria-describedby="register-password-error" required>
+                <button class="password-toggle" id="register-password-toggle" type="button" aria-label="Hiện mật khẩu" data-i18n-aria-label="showPassword" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M2.75 12s3.2-5.25 9.25-5.25S21.25 12 21.25 12 18.05 17.25 12 17.25 2.75 12 2.75 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    <circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                </button>
+              </div>
+              <p class="field-error" id="register-password-error" aria-live="polite"></p>
+            </div>
+
+            <button class="primary-button" id="register-button" type="submit">
+              <span class="button-label" data-i18n="signUp">Đăng ký</span>
+              <span class="button-spinner" aria-hidden="true"></span>
+            </button>
+            <p class="form-status" id="register-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <p class="signup-prompt"><span data-i18n="loginPrompt">Đã có tài khoản?</span> <a class="text-link" href="#login" id="go-login" data-i18n="signIn">Đăng nhập</a></p>
+        </div>
+
+        <section class="auth-card dashboard-card" id="dashboard-view" aria-labelledby="dashboard-title" hidden>
+          <div class="dashboard-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="m4.5 14.4 11.5-9 11.5 9V27H4.5V14.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16.2 23.3c-4.6-2.2-4.4-6.6-3.6-8.4 4.4.1 7 2.2 6.8 5.2-.1 1.5-1.4 2.8-3.2 3.2Z" fill="#dff4e8"/>
+              <path d="M15.2 22.7c.3-2.2 1.3-3.9 3.4-5.6" stroke="#4d916e" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="eyebrow" data-i18n="dashboardEyebrow">KHÔNG GIAN CỦA BẠN</p>
+          <h2 id="dashboard-title" tabindex="-1" data-i18n="dashboardTitle">Chào mừng bạn đến với Cleanova!</h2>
+          <p class="dashboard-description" data-i18n="dashboardDescription">Sẵn sàng đặt lịch và chăm sóc ngôi nhà theo cách thật nhẹ nhàng.</p>
+
+          <div class="dashboard-account">
+            <div class="account-avatar" id="account-avatar" aria-hidden="true">C</div>
+            <div class="account-meta">
+              <strong id="account-name">-</strong>
+              <span id="account-email">-</span>
+            </div>
+          </div>
+
+          <ul class="account-details">
+            <li><span data-i18n="accountId">Mã người dùng</span><span id="account-id">-</span></li>
+            <li><span data-i18n="accountPhone">Số điện thoại</span><span id="account-phone">-</span></li>
+            <li><span data-i18n="accountRole">Vai trò</span><span id="account-role">-</span></li>
+          </ul>
+
+          <div class="dashboard-preview">
+            <span class="preview-dot"></span>
+            <span data-i18n="dashboardPreview">Không gian sạch sẽ, tâm trí thảnh thơi</span>
+            <span class="preview-check" aria-hidden="true">✓</span>
+          </div>
+          <button class="primary-button" id="logout-button" type="button" data-i18n="logout">Đăng xuất</button>
+          <p class="security-note" data-i18n="dashboardSecurity">Thông tin tài khoản được lấy trực tiếp từ cơ sở dữ liệu</p>
+        </section>
+
+        <div class="content-footer" data-i18n="contentFooter">© 2026 Cleanova. Nhà sạch, lòng an yên.</div>
+      </section>
+    </main>
+  </body>
+</html>
