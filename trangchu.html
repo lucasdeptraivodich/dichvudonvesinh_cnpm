@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <!-- ============================================================
+       CLEANOVA - Trang chủ (Homepage / Landing Page)
+       Dịch vụ dọn vệ sinh chuyên nghiệp
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cleanova - Dịch vụ dọn vệ sinh nhà cửa & văn phòng chuyên nghiệp. Đặt lịch trong 60 giây. Đội ngũ uy tín, giá minh bạch, đảm bảo hài lòng 100%.">
+  <meta name="keywords" content="dọn vệ sinh, dịch vụ vệ sinh, dọn nhà, vệ sinh văn phòng, deep cleaning, cleanova">
+  <meta name="author" content="Cleanova">
+  <title>Cleanova — Dịch vụ vệ sinh chuyên nghiệp | A Cleaner Space, A Better Life</title>
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2310B981'/%3E%3Cpath d='M16 6 L8 14 L10 14 L10 24 L22 24 L22 14 L24 14 Z' fill='white'/%3E%3Cpath d='M13 18 Q16 12 19 18' stroke='%2310B981' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+
+  <!-- Liên kết CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION BAR (Thanh điều hướng - Sticky Top)
+       ============================================================ -->
+  <header class="header" id="header" role="banner">
+    <div class="container">
+
+      <!-- Logo Cleanova: SVG nội tuyến (biểu tượng chiếc lá + ngôi nhà) -->
+      <a href="#" class="logo" aria-label="Cleanova - Trang chủ">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Ngôi nhà -->
+          <path d="M18 4L4 16H8V30H28V16H32L18 4Z" fill="#10B981" opacity="0.15"/>
+          <path d="M18 6L6 16H10V28H26V16H30L18 6Z" stroke="#10B981" stroke-width="2" fill="none" stroke-linejoin="round"/>
+          <!-- Chiếc lá bên trong ngôi nhà -->
+          <path d="M14 24C14 24 15 17 22 14C22 14 21 21 14 24Z" fill="#10B981"/>
+          <path d="M14 24C14 24 17 19 22 14" stroke="#059669" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <!-- Gân lá nhỏ -->
+          <path d="M16 22C17 20 18 18 20 16" stroke="#059669" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+        <span class="logo-text">Cleanova</span>
+      </a>
+
+      <!-- Navigation Links (Desktop) -->
+      <nav class="nav" id="main-nav" role="navigation" aria-label="Menu chính">
+        <a href="#hero" class="nav-link active" data-i18n="nav_home">Trang chủ</a>
+        <a href="#services" class="nav-link" data-i18n="nav_services">Dịch vụ</a>
+        <a href="#how-it-works" class="nav-link" data-i18n="nav_process">Quy trình</a>
+        <a href="#calculator" class="nav-link" data-i18n="nav_pricing">Bảng giá</a>
+        <a href="#testimonials" class="nav-link" data-i18n="nav_reviews">Đánh giá</a>
+        <a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a>
+      </nav>
+
+      <!-- Nhóm hành động bên phải -->
+      <div class="header-actions">
+        <!-- Nút chuyển đổi ngôn ngữ VI/EN -->
+        <div class="lang-toggle" role="group" aria-label="Chọn ngôn ngữ">
+          <button class="lang-btn active" data-lang="vi" aria-label="Tiếng Việt">VI</button>
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+
+        <!-- Nút Đăng nhập -->
+        <a href="#" class="btn btn-ghost btn-sm" data-i18n="btn_login">Đăng nhập</a>
+
+        <!-- Nút CTA chính - Đặt lịch ngay -->
+        <a href="#" class="btn btn-primary btn-sm" data-action="book" data-i18n="btn_book_now">Đặt lịch ngay</a>
+
+        <!-- Nút Hamburger Menu (Mobile) -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Menu mobile">
+    <a href="#hero" class="nav-link" data-i18n="nav_home">Trang chủ</a>
+    <a href="#services" class="nav-link" data-i18n="nav_services">Dịch vụ</a>
+    <a href="#how-it-works" class="nav-link" data-i18n="nav_process">Quy trình</a>
+    <a href="#calculator" class="nav-link" data-i18n="nav_pricing">Bảng giá</a>
+    <a href="#testimonials" class="nav-link" data-i18n="nav_reviews">Đánh giá</a>
+    <a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a>
+    <div class="mobile-nav-actions">
+      <a href="#" class="btn btn-secondary" data-i18n="btn_login">Đăng nhập</a>
+      <a href="#" class="btn btn-primary" data-action="book" data-i18n="btn_book_now">Đặt lịch ngay</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT (Nội dung chính)
+       ============================================================ -->
+  <main role="main">
+
+    <!-- ============================================================
+         HERO SECTION (Phần chào mừng ấn tượng)
+         ============================================================ -->
+    <section class="hero" id="hero" aria-label="Giới thiệu Cleanova">
+      <div class="container">
+
+        <!-- Nội dung Hero bên trái -->
+        <div class="hero-content">
+          <!-- Badge tin tưởng -->
+          <div class="hero-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            <span data-i18n="hero_badge">🟢 Ứng dụng dọn vệ sinh #1 Việt Nam</span>
+          </div>
+
+          <!-- Headline chính -->
+          <h1 class="hero-title">
+            <span data-i18n="hero_title_1">Dịch vụ dọn vệ sinh</span><br>
+            <span class="highlight" data-i18n="hero_title_highlight">nhà cửa & văn phòng</span><br>
+            <span data-i18n="hero_title_2">chuyên nghiệp</span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            Đặt lịch trong 60 giây. Đội ngũ đối tác uy tín, tận tâm, chuẩn hóa quy trình. Cho bạn không gian sống sạch hoàn hảo.
+          </p>
+
+          <!-- Nút CTA -->
+          <div class="hero-cta">
+            <a href="#" class="btn btn-primary btn-lg" data-action="book" data-i18n="hero_cta_book">Đặt dịch vụ ngay</a>
+            <a href="#calculator" class="btn btn-secondary btn-lg" data-i18n="hero_cta_price">Xem bảng giá</a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="trust-badges">
+            <div class="trust-badge">
+              <div class="trust-badge-icon" aria-hidden="true">⭐</div>
+              <div class="trust-badge-text">
+                <strong data-i18n="trust_rating_value">4.9/5★</strong>
+                <span data-i18n="trust_rating_label">Đánh giá</span>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon" aria-hidden="true">👥</div>
+              <div class="trust-badge-text">
+                <strong data-i18n="trust_customers_value">10.000+</strong>
+                <span data-i18n="trust_customers_label">Khách hàng tin dùng</span>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon" aria-hidden="true">🛡️</div>
+              <div class="trust-badge-text">
+                <strong data-i18n="trust_guarantee_value">100%</strong>
+                <span data-i18n="trust_guarantee_label">Đảm bảo hài lòng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hình minh họa Hero bên phải -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-illustration">
+            <!-- SVG minh họa: Ngôi nhà sạch sẽ với cảnh vệ sinh -->
+            <svg viewBox="0 0 500 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Nền trang trí -->
+              <circle cx="250" cy="210" r="180" fill="#ECFDF5" opacity="0.5"/>
+              <circle cx="250" cy="210" r="130" fill="#D1FAE5" opacity="0.3"/>
+
+              <!-- Ngôi nhà chính -->
+              <path d="M250 80L130 170H150V320H350V170H370L250 80Z" fill="white" stroke="#10B981" stroke-width="3" stroke-linejoin="round"/>
+
+              <!-- Mái nhà -->
+              <path d="M250 80L130 170H370L250 80Z" fill="#10B981" opacity="0.15"/>
+              <path d="M250 80L130 170H370L250 80Z" stroke="#10B981" stroke-width="3" stroke-linejoin="round" fill="none"/>
+
+              <!-- Ống khói -->
+              <rect x="300" y="100" width="25" height="45" rx="3" fill="white" stroke="#10B981" stroke-width="2"/>
+              <!-- Khói -->
+              <circle cx="312" cy="90" r="6" fill="#D1FAE5"/>
+              <circle cx="305" cy="80" r="5" fill="#D1FAE5" opacity="0.7"/>
+              <circle cx="315" cy="72" r="4" fill="#D1FAE5" opacity="0.4"/>
+
+              <!-- Cửa chính -->
+              <rect x="225" y="240" width="50" height="80" rx="6" fill="#059669" opacity="0.2" stroke="#10B981" stroke-width="2"/>
+              <circle cx="265" cy="280" r="4" fill="#10B981"/>
+
+              <!-- Cửa sổ trái -->
+              <rect x="165" y="195" width="40" height="35" rx="4" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="2"/>
+              <line x1="185" y1="195" x2="185" y2="230" stroke="#0EA5E9" stroke-width="1.5"/>
+              <line x1="165" y1="212" x2="205" y2="212" stroke="#0EA5E9" stroke-width="1.5"/>
+
+              <!-- Cửa sổ phải -->
+              <rect x="295" y="195" width="40" height="35" rx="4" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="2"/>
+              <line x1="315" y1="195" x2="315" y2="230" stroke="#0EA5E9" stroke-width="1.5"/>
+              <line x1="295" y1="212" x2="335" y2="212" stroke="#0EA5E9" stroke-width="1.5"/>
+
+              <!-- Nền đất / cỏ -->
+              <path d="M80 320Q250 340 420 320V370Q250 350 80 370Z" fill="#D1FAE5" opacity="0.5"/>
+              <line x1="80" y1="320" x2="420" y2="320" stroke="#10B981" stroke-width="2" opacity="0.3"/>
+
+              <!-- Cây bên trái -->
+              <rect x="105" y="280" width="8" height="40" rx="2" fill="#059669" opacity="0.6"/>
+              <circle cx="109" cy="270" r="18" fill="#10B981" opacity="0.3"/>
+              <circle cx="100" cy="278" r="12" fill="#10B981" opacity="0.2"/>
+              <circle cx="118" cy="275" r="14" fill="#10B981" opacity="0.25"/>
+
+              <!-- Cây bên phải -->
+              <rect x="375" y="285" width="7" height="35" rx="2" fill="#059669" opacity="0.6"/>
+              <circle cx="378" cy="275" r="15" fill="#10B981" opacity="0.25"/>
+              <circle cx="370" cy="280" r="11" fill="#10B981" opacity="0.2"/>
+              <circle cx="386" cy="278" r="13" fill="#10B981" opacity="0.22"/>
+
+              <!-- Các ngôi sao lấp lánh trang trí -->
+              <g fill="#10B981" opacity="0.5">
+                <path d="M160 120L162 125L167 126L163 129L164 134L160 131L156 134L157 129L153 126L158 125Z" transform="scale(0.6) translate(160, 80)"/>
+                <path d="M340 100L342 105L347 106L343 109L344 114L340 111L336 114L337 109L333 106L338 105Z" transform="scale(0.5) translate(380, 60)"/>
+              </g>
+
+              <!-- Bong bóng xà phòng -->
+              <circle cx="180" cy="140" r="8" fill="none" stroke="#0EA5E9" stroke-width="1" opacity="0.4"/>
+              <circle cx="330" cy="150" r="6" fill="none" stroke="#0EA5E9" stroke-width="1" opacity="0.3"/>
+              <circle cx="200" cy="110" r="5" fill="none" stroke="#10B981" stroke-width="1" opacity="0.3"/>
+              <circle cx="360" cy="130" r="7" fill="none" stroke="#10B981" stroke-width="1" opacity="0.35"/>
+
+              <!-- Hiệu ứng sạch sẽ - tia sáng -->
+              <g stroke="#FBBF24" stroke-width="2" stroke-linecap="round" opacity="0.6">
+                <line x1="250" y1="55" x2="250" y2="45"/>
+                <line x1="265" y1="58" x2="272" y2="50"/>
+                <line x1="235" y1="58" x2="228" y2="50"/>
+              </g>
+            </svg>
+
+            <!-- Thẻ nổi 1: Hoàn thành -->
+            <div class="hero-float-card card-1">
+              <div class="float-icon green">✅</div>
+              <div class="float-text">
+                <strong data-i18n="hero_float_1_title">Hoàn thành!</strong>
+                <span data-i18n="hero_float_1_text">Đã dọn xong 3 phòng</span>
+              </div>
+            </div>
+
+            <!-- Thẻ nổi 2: Đánh giá -->
+            <div class="hero-float-card card-2">
+              <div class="float-icon blue">💬</div>
+              <div class="float-text">
+                <strong data-i18n="hero_float_2_title">⭐ 5.0</strong>
+                <span data-i18n="hero_float_2_text">Dịch vụ tuyệt vời!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES SECTION (Dịch vụ vệ sinh chủ đạo)
+         ============================================================ -->
+    <section class="section services" id="services" aria-label="Dịch vụ của Cleanova">
+      <div class="container">
+        <!-- Tiêu đề Section -->
+        <div class="section-header reveal">
+          <div class="section-badge" data-i18n="services_badge">🧹 Dịch vụ của chúng tôi</div>
+          <h2 class="section-title" data-i18n="services_title">Giải pháp vệ sinh toàn diện</h2>
+          <p class="section-subtitle" data-i18n="services_subtitle">Từ dọn dẹp nhà cửa hàng ngày đến tổng vệ sinh chuyên sâu, chúng tôi đáp ứng mọi nhu cầu của bạn.</p>
+        </div>
+
+        <!-- Grid dịch vụ 5 thẻ -->
+        <div class="services-grid">
+
+          <!-- Dịch vụ 1: Dọn dẹp theo giờ -->
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="2"/>
+                <path d="M14 8V14L18 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="service_1_title">Dọn dẹp nhà cửa theo giờ</h3>
+            <p class="service-desc" data-i18n="service_1_desc">Lau chùi, dọn phòng khách, phòng ngủ, nhà bếp, toilet. Linh hoạt theo nhu cầu của bạn.</p>
+            <div class="service-price" data-i18n="service_1_price">Từ 150.000 VNĐ/giờ</div>
+            <a href="#" class="btn btn-outline btn-sm" data-action="book" data-i18n="btn_detail">Chi tiết</a>
+          </div>
+
+          <!-- Dịch vụ 2: Tổng vệ sinh Deep Cleaning -->
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 3L16 9H22L17 13L19 20L14 16L9 20L11 13L6 9H12L14 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+                <circle cx="14" cy="14" r="4" fill="currentColor" opacity="0.2"/>
+              </svg>
+            </div>
+            <h3 data-i18n="service_2_title">Tổng vệ sinh Deep Cleaning</h3>
+            <p class="service-desc" data-i18n="service_2_desc">Vệ sinh toàn bộ diện tích nhà, làm sạch sâu mọi ngóc ngách. Phù hợp định kỳ hàng tháng.</p>
+            <div class="service-price" data-i18n="service_2_price">Từ 500.000 VNĐ/lần</div>
+            <a href="#" class="btn btn-outline btn-sm" data-action="book" data-i18n="btn_detail">Chi tiết</a>
+          </div>
+
+          <!-- Dịch vụ 3: Vệ sinh văn phòng -->
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="6" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M4 10H24" stroke="currentColor" stroke-width="2"/>
+                <rect x="8" y="14" width="4" height="4" rx="1" fill="currentColor" opacity="0.3"/>
+                <rect x="16" y="14" width="4" height="4" rx="1" fill="currentColor" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 data-i18n="service_3_title">Vệ sinh văn phòng & Workspace</h3>
+            <p class="service-desc" data-i18n="service_3_desc">Dịch vụ định kỳ cho doanh nghiệp, đảm bảo môi trường làm việc sạch đẹp, chuyên nghiệp.</p>
+            <div class="service-price" data-i18n="service_3_price">Từ 300.000 VNĐ/lần</div>
+            <a href="#" class="btn btn-outline btn-sm" data-action="book" data-i18n="btn_detail">Chi tiết</a>
+          </div>
+
+          <!-- Dịch vụ 4: Giặt Sofa, Nệm -->
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 18C4 16 6 14 8 14H20C22 14 24 16 24 18V22H4V18Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M6 14V10C6 8 8 6 10 6H18C20 6 22 8 22 10V14" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 22V24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M20 22V24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="service_4_title">Giặt Sofa, Nệm & Rèm cửa</h3>
+            <p class="service-desc" data-i18n="service_4_desc">Hút bụi chuyên sâu, khử khuẩn bằng hơi nước nóng. Trả lại vẻ mới cho nội thất.</p>
+            <div class="service-price" data-i18n="service_4_price">Từ 400.000 VNĐ/món</div>
+            <a href="#" class="btn btn-outline btn-sm" data-action="book" data-i18n="btn_detail">Chi tiết</a>
+          </div>
+
+          <!-- Dịch vụ 5: Vệ sinh sau xây dựng -->
+          <div class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 4L4 12H8V24H20V12H24L14 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+                <path d="M11 24V18H17V24" stroke="currentColor" stroke-width="2"/>
+                <circle cx="20" cy="6" r="3" fill="currentColor" opacity="0.3"/>
+                <path d="M19 5L21 7" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                <path d="M21 5L19 7" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="service_5_title">Vệ sinh sau xây dựng</h3>
+            <p class="service-desc" data-i18n="service_5_desc">Dọn dẹp thô, xử lý vết sơn, bụi mịn sau thi công. Sẵn sàng cho ngày dọn về.</p>
+            <div class="service-price" data-i18n="service_5_price">Từ 8.000 VNĐ/m²</div>
+            <a href="#" class="btn btn-outline btn-sm" data-action="book" data-i18n="btn_detail">Chi tiết</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CALCULATOR SECTION (Công cụ tính giá nhanh)
+         ============================================================ -->
+    <section class="section calculator" id="calculator" aria-label="Công cụ tính giá">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-badge" data-i18n="calc_badge">💰 Báo giá nhanh</div>
+          <h2 class="section-title" data-i18n="calc_title">Công cụ tính giá ước tính</h2>
+          <p class="section-subtitle" data-i18n="calc_subtitle">Chọn loại dịch vụ và nhận báo giá ngay lập tức. Nhanh chóng, minh bạch.</p>
+        </div>
+
+        <!-- Widget tính giá 2 cột -->
+        <div class="calculator-wrapper reveal">
+
+          <!-- Cột trái: Form chọn dịch vụ -->
+          <div class="calculator-form">
+            <h3 data-i18n="calc_form_title">Tùy chỉnh dịch vụ</h3>
+
+            <!-- Loại dịch vụ -->
+            <div class="form-group">
+              <label for="calc-service" data-i18n="calc_label_service">Loại dịch vụ</label>
+              <select id="calc-service" aria-label="Chọn loại dịch vụ">
+                <option value="hourly" data-i18n-option="calc_option_hourly">Dọn dẹp theo giờ</option>
+                <option value="deep" data-i18n-option="calc_option_deep">Tổng vệ sinh Deep Cleaning</option>
+                <option value="sofa" data-i18n-option="calc_option_sofa">Giặt Sofa / Nệm</option>
+              </select>
+            </div>
+
+            <!-- Diện tích / Quy mô -->
+            <div class="form-group">
+              <label for="calc-area" data-i18n="calc_label_area">Diện tích / Quy mô</label>
+              <select id="calc-area" aria-label="Chọn diện tích">
+                <option value="small" data-i18n-option="calc_option_small">Nhỏ (&lt; 50m² / 1-2 phòng)</option>
+                <option value="medium" data-i18n-option="calc_option_medium">Vừa (50-100m² / 3-4 phòng)</option>
+                <option value="large" data-i18n-option="calc_option_large">Lớn (&gt; 100m² / 5+ phòng)</option>
+              </select>
+            </div>
+
+            <!-- Tần suất -->
+            <div class="form-group">
+              <label for="calc-frequency" data-i18n="calc_label_frequency">Tần suất</label>
+              <select id="calc-frequency" aria-label="Chọn tần suất">
+                <option value="once" data-i18n-option="calc_option_once">Một lần</option>
+                <option value="weekly" data-i18n-option="calc_option_weekly">Hàng tuần (Giảm 15%)</option>
+                <option value="monthly" data-i18n-option="calc_option_monthly">Hàng tháng (Giảm 10%)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Cột phải: Kết quả giá -->
+          <div class="calculator-result">
+            <div class="calculator-result-content">
+              <div class="result-label" data-i18n="calc_result_label">GIÁ ƯỚC TÍNH</div>
+              <div class="result-price" id="calc-price">300.000 VNĐ</div>
+              <div class="result-unit" data-i18n="calc_result_unit">/lần dịch vụ</div>
+              <div class="result-discount" id="calc-discount-row" style="display: none;">
+                🏷️ <span id="calc-discount-display"></span>
+              </div>
+              <a href="#" class="btn" data-action="book" data-i18n="calc_btn_continue">Tiếp tục đặt lịch →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOW IT WORKS (Quy trình hoạt động 4 bước)
+         ============================================================ -->
+    <section class="section how-it-works" id="how-it-works" aria-label="Quy trình hoạt động">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-badge" data-i18n="how_badge">⚡ Quy trình đặt dịch vụ</div>
+          <h2 class="section-title" data-i18n="how_title">Đơn giản chỉ 4 bước</h2>
+          <p class="section-subtitle" data-i18n="how_subtitle">Từ đặt lịch đến tận hưởng không gian sạch sẽ, mọi thứ diễn ra nhanh chóng và thuận tiện.</p>
+        </div>
+
+        <!-- Grid 4 bước -->
+        <div class="steps-grid reveal">
+          <!-- Bước 1 -->
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon" aria-hidden="true">📋</div>
+            <h3 data-i18n="step_1_title">Chọn dịch vụ & Thời gian</h3>
+            <p data-i18n="step_1_desc">Chọn loại vệ sinh, ngày giờ phù hợp với lịch trình của bạn.</p>
+          </div>
+
+          <!-- Bước 2 -->
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon" aria-hidden="true">💳</div>
+            <h3 data-i18n="step_2_title">Xác nhận & Thanh toán</h3>
+            <p data-i18n="step_2_desc">Xác nhận đơn và thanh toán tiện lợi qua nhiều phương thức.</p>
+          </div>
+
+          <!-- Bước 3 -->
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon" aria-hidden="true">🧹</div>
+            <h3 data-i18n="step_3_title">Chuyên viên tới nhà</h3>
+            <p data-i18n="step_3_desc">Đội ngũ chuyên nghiệp đến đúng giờ, đầy đủ dụng cụ.</p>
+          </div>
+
+          <!-- Bước 4 -->
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-icon" aria-hidden="true">✨</div>
+            <h3 data-i18n="step_4_title">Tận hưởng không gian sạch</h3>
+            <p data-i18n="step_4_desc">Kiểm tra, đánh giá và tận hưởng kết quả hoàn hảo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHY CHOOSE US (Tại sao chọn Cleanova)
+         ============================================================ -->
+    <section class="section why-choose" id="why-choose" aria-label="Tại sao chọn Cleanova">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-badge" data-i18n="why_badge">✨ Tại sao chọn Cleanova</div>
+          <h2 class="section-title" data-i18n="why_title">6 lý do bạn nên tin tưởng chúng tôi</h2>
+          <p class="section-subtitle" data-i18n="why_subtitle">Chúng tôi cam kết mang đến dịch vụ vệ sinh chất lượng cao nhất với trải nghiệm tốt nhất.</p>
+        </div>
+
+        <!-- Grid 6 lý do -->
+        <div class="why-grid">
+          <!-- Lý do 1 -->
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">🔒</div>
+            <h3 data-i18n="why_1_title">Nhân viên được xác minh</h3>
+            <p data-i18n="why_1_desc">Minh bạch nhân thân, đào tạo bài bản, cam kết uy tín và an toàn tuyệt đối.</p>
+          </div>
+
+          <!-- Lý do 2 -->
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">💎</div>
+            <h3 data-i18n="why_2_title">Giá cả minh bạch</h3>
+            <p data-i18n="why_2_desc">Không chi phí ẩn, báo giá rõ ràng trước khi đặt dịch vụ. Thanh toán an toàn.</p>
+          </div>
+
+          <!-- Lý do 3 -->
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">🌿</div>
+            <h3 data-i18n="why_3_title">Khử khuẩn an toàn</h3>
+            <p data-i18n="why_3_desc">Sử dụng dung dịch thân thiện môi trường, an toàn cho trẻ nhỏ và thú cưng.</p>
+          </div>
+
+          <!-- Lý do 4 -->
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">📅</div>
+            <h3 data-i18n="why_4_title">Đặt lịch linh hoạt</h3>
+            <p data-i18n="why_4_desc">Đổi lịch miễn phí, hủy trước 24h không mất phí. Phù hợp mọi lịch trình.</p>
+          </div>
+
+          <!-- Lý do 5 -->
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">🛡️</div>
+            <h3 data-i18n="why_5_title">Bảo hiểm tài sản</h3>
+            <p data-i18n="why_5_desc">Bảo hiểm lên đến 50 triệu VNĐ. Đảm bảo hài lòng 100% hoặc hoàn tiền.</p>
+          </div>
+
+          <!-- Lý do 6 -->
+          <div class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">💬</div>
+            <h3 data-i18n="why_6_title">Hỗ trợ 24/7</h3>
+            <p data-i18n="why_6_desc">Đội ngũ chăm sóc khách hàng luôn sẵn sàng hỗ trợ mọi lúc, mọi nơi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS (Đánh giá từ khách hàng)
+         ============================================================ -->
+    <section class="section testimonials" id="testimonials" aria-label="Đánh giá khách hàng">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-badge" data-i18n="reviews_badge">💬 Đánh giá khách hàng</div>
+          <h2 class="section-title" data-i18n="reviews_title">Khách hàng nói gì về chúng tôi</h2>
+          <p class="section-subtitle" data-i18n="reviews_subtitle">Hàng ngàn khách hàng đã tin tưởng và hài lòng với dịch vụ của Cleanova.</p>
+        </div>
+
+        <!-- Grid 3 đánh giá -->
+        <div class="testimonials-grid">
+
+          <!-- Đánh giá 1 -->
+          <div class="testimonial-card reveal">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <div class="stars" aria-label="5 trên 5 sao">
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+            </div>
+            <p class="review-text" data-i18n="review_1_text">"Dịch vụ tuyệt vời! Nhân viên đến đúng giờ, làm việc rất cẩn thận. Nhà tôi sạch bóng sau 3 tiếng. Chắc chắn sẽ đặt lại!"</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" aria-hidden="true">MA</div>
+              <div class="reviewer-info">
+                <strong data-i18n="review_1_name">Nguyễn Thị Mai Anh</strong>
+                <span data-i18n="review_1_service">Tổng vệ sinh Deep Cleaning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Đánh giá 2 -->
+          <div class="testimonial-card reveal">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <div class="stars" aria-label="5 trên 5 sao">
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+            </div>
+            <p class="review-text" data-i18n="review_2_text">"Giặt sofa nhà mình sạch như mới, không ngờ kết quả tốt đến vậy. Giá cả hợp lý và quy trình rất chuyên nghiệp."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" aria-hidden="true">VH</div>
+              <div class="reviewer-info">
+                <strong data-i18n="review_2_name">Trần Văn Hùng</strong>
+                <span data-i18n="review_2_service">Giặt Sofa & Nệm</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Đánh giá 3 -->
+          <div class="testimonial-card reveal">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <div class="stars" aria-label="5 trên 5 sao">
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+            </div>
+            <p class="review-text" data-i18n="review_3_text">"Văn phòng công ty mình đặt dịch vụ hàng tuần. Rất hài lòng về chất lượng và sự đúng giờ. Nhân viên thân thiện."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" aria-hidden="true">PT</div>
+              <div class="reviewer-info">
+                <strong data-i18n="review_3_name">Lê Phương Thảo</strong>
+                <span data-i18n="review_3_service">Vệ sinh văn phòng định kỳ</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROMO BANNER (Banner khuyến mãi)
+         ============================================================ -->
+    <section class="promo-banner" id="promo" aria-label="Khuyến mãi">
+      <div class="container">
+        <div class="promo-content reveal">
+          <div class="promo-icon" aria-hidden="true">🎉</div>
+          <h2 data-i18n="promo_title">Nhận ngay ưu đãi 20% cho lần đặt lịch đầu tiên!</h2>
+          <p data-i18n="promo_subtitle">Áp dụng cho tất cả dịch vụ. Ưu đãi có giới hạn — Đặt ngay hôm nay!</p>
+          <div class="promo-code">🏷️ CLEANOVA20</div>
+          <br><br>
+          <a href="#" class="btn" data-action="promo" data-i18n="promo_btn">Đặt ngay — Nhập mã CLEANOVA20</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ SECTION (Câu hỏi thường gặp)
+         ============================================================ -->
+    <section class="section faq" id="faq" aria-label="Câu hỏi thường gặp">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-badge" data-i18n="faq_badge">❓ Câu hỏi thường gặp</div>
+          <h2 class="section-title" data-i18n="faq_title">Giải đáp thắc mắc của bạn</h2>
+          <p class="section-subtitle" data-i18n="faq_subtitle">Tìm câu trả lời cho những câu hỏi phổ biến về dịch vụ của Cleanova.</p>
+        </div>
+
+        <!-- Danh sách FAQ Accordion -->
+        <div class="faq-list reveal">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_1_q">Làm thế nào để đặt dịch vụ vệ sinh?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_1_a">Bạn chỉ cần chọn loại dịch vụ, thời gian mong muốn, xác nhận đơn hàng và thanh toán. Toàn bộ quy trình chỉ mất khoảng 60 giây. Bạn cũng có thể gọi hotline 1900-xxxx để được hỗ trợ trực tiếp.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_2_q">Nhân viên vệ sinh có được đào tạo không?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_2_a">Tất cả nhân viên của Cleanova đều được xác minh lý lịch, đào tạo chuyên nghiệp và kiểm tra kỹ năng định kỳ. Chúng tôi đảm bảo chất lượng dịch vụ ở mức cao nhất.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_3_q">Tôi có thể hủy hoặc đổi lịch không?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_3_a">Hoàn toàn có thể! Bạn được hủy hoặc đổi lịch miễn phí trước 24 giờ so với giờ hẹn. Sau thời gian này, phí hủy sẽ là 50% giá dịch vụ.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_4_q">Cleanova có cung cấp dụng cụ và hóa chất không?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_4_a">Có, đội ngũ của chúng tôi mang đầy đủ dụng cụ chuyên dụng và dung dịch tẩy rửa thân thiện môi trường. Bạn không cần chuẩn bị gì thêm.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq_5_q">Phương thức thanh toán nào được hỗ trợ?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_5_a">Cleanova hỗ trợ thanh toán qua thẻ ngân hàng (Visa/Mastercard), ví điện tử (MoMo, ZaloPay, VNPay), chuyển khoản ngân hàng hoặc tiền mặt khi hoàn thành dịch vụ.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER (Chân trang)
+       ============================================================ -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container">
+      <!-- Grid Footer 4 cột -->
+      <div class="footer-grid">
+
+        <!-- Cột 1: Thương hiệu & Liên hệ -->
+        <div class="footer-brand">
+          <a href="#" class="logo" aria-label="Cleanova">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M18 4L4 16H8V30H28V16H32L18 4Z" fill="#10B981" opacity="0.3"/>
+              <path d="M18 6L6 16H10V28H26V16H30L18 6Z" stroke="#10B981" stroke-width="2" fill="none" stroke-linejoin="round"/>
+              <path d="M14 24C14 24 15 17 22 14C22 14 21 21 14 24Z" fill="#10B981"/>
+              <path d="M14 24C14 24 17 19 22 14" stroke="#059669" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            </svg>
+            <span class="logo-text">Cleanova</span>
+          </a>
+          <p data-i18n="footer_slogan">Không gian sạch hơn, cuộc sống tốt hơn.</p>
+          <div class="footer-contact">
+            <a href="tel:1900xxxx" aria-label="Gọi điện">📞 <span data-i18n="footer_phone">1900-xxxx</span></a>
+            <a href="mailto:contact@cleanova.vn" aria-label="Gửi email">📧 <span data-i18n="footer_email">contact@cleanova.vn</span></a>
+            <a href="#" aria-label="Địa chỉ">📍 <span data-i18n="footer_address">123 Đường ABC, Quận Cầu Giấy, Hà Nội</span></a>
+          </div>
+        </div>
+
+        <!-- Cột 2: Dịch vụ -->
+        <div class="footer-column">
+          <h4 data-i18n="footer_col2_title">Dịch vụ</h4>
+          <div class="footer-links">
+            <a href="#services" data-i18n="footer_link_hourly">Dọn dẹp theo giờ</a>
+            <a href="#services" data-i18n="footer_link_deep">Tổng vệ sinh</a>
+            <a href="#services" data-i18n="footer_link_office">Vệ sinh văn phòng</a>
+            <a href="#services" data-i18n="footer_link_sofa">Giặt sofa & nệm</a>
+            <a href="#services" data-i18n="footer_link_construction">Vệ sinh sau xây dựng</a>
+          </div>
+        </div>
+
+        <!-- Cột 3: Về Cleanova -->
+        <div class="footer-column">
+          <h4 data-i18n="footer_col3_title">Về Cleanova</h4>
+          <div class="footer-links">
+            <a href="#" data-i18n="footer_link_about">Giới thiệu</a>
+            <a href="#" data-i18n="footer_link_career">Tuyển dụng</a>
+            <a href="#" data-i18n="footer_link_partner">Trở thành đối tác</a>
+            <a href="#" data-i18n="footer_link_blog">Blog</a>
+            <a href="#" data-i18n="footer_link_contact">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Cột 4: Newsletter -->
+        <div class="footer-newsletter">
+          <h4 data-i18n="footer_newsletter_title">Nhận thông báo ưu đãi</h4>
+          <p data-i18n="footer_newsletter_desc">Đăng ký email để nhận thông tin khuyến mãi và mẹo vệ sinh hữu ích.</p>
+          <form class="newsletter-form" id="newsletter-form" aria-label="Đăng ký nhận thông báo">
+            <input type="email" required placeholder="Nhập email của bạn..." data-i18n-placeholder="footer_newsletter_placeholder" aria-label="Địa chỉ email">
+            <button type="submit" class="btn btn-primary" data-i18n="footer_newsletter_btn">Đăng ký</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p data-i18n="footer_copyright">© 2024 Cleanova. Bảo lưu mọi quyền.</p>
+        <div class="footer-bottom-links">
+          <a href="#" data-i18n="footer_privacy">Chính sách bảo mật</a>
+          <a href="#" data-i18n="footer_terms">Điều khoản dịch vụ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       TOAST NOTIFICATION CONTAINER
+       Vùng chứa thông báo nổi (góc dưới phải)
+       ============================================================ -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Liên kết JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
