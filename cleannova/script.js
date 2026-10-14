@@ -1,3 +1,4 @@
+// Giữ nguyên logic đăng nhập demo, tách biệt với tương tác của trang chủ.
 "use strict";
 
 const loginForm = document.querySelector("#login-form");
